@@ -1,6 +1,6 @@
 {
   "name": "submodule-rule",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "license": "MIT",
   "module": "es/index.js",
   "main": "lib/index.js",
@@ -11,7 +11,7 @@
     "y": "npm --no-git-tag-version version minor",
     "z": "npm --no-git-tag-version version patch",
     "postversion": "npm run changelog && git add . && npm run tag",
-    "prepublishOnly": "npm run build",
+    "prepublish": "npm run build",
     "postpublish": "npm run clean",
     "clean": "rm -rf ./dist/ ./es/ ./lib/",
     "start": "npm run clean && NODE_ENV=development rollup -w -c ./build/rollup.config.js",
