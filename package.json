@@ -40,6 +40,6 @@
     "shelljs": "^0.8.3"
   },
   "bin": {
-    "submodule-rule": "./bin/submodule-rule.js"
+    "submodule-rule-cli": "bin/submodule-rule-cli.js"
   }
 }
