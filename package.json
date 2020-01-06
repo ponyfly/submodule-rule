@@ -37,9 +37,7 @@
   "dependencies": {
     "@babel/runtime": "^7.7.7",
     "@babel/runtime-corejs2": "^7.7.7",
-    "lodash": "^4.17.15",
-    "shelljs": "^0.8.3",
-    "the-answer": "^1.0.0"
+    "shelljs": "^0.8.3"
   },
   "bin": {
     "submodule-rule": "./bin/submodule-rule.js"

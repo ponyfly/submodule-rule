@@ -5,6 +5,6 @@ node_modules
 package-lock.json
 yarn.lock
 
-dist
-es
-lib
+/dist/
+/es/
+/lib/
