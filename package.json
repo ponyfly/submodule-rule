@@ -1,0 +1,47 @@
+{
+  "name": "submodule-rule",
+  "version": "0.0.2",
+  "license": "MIT",
+  "module": "es/index.js",
+  "main": "lib/index.js",
+  "scripts": {
+    "tag": "node ./build/version.js",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "x": "npm --no-git-tag-version version major",
+    "y": "npm --no-git-tag-version version minor",
+    "z": "npm --no-git-tag-version version patch",
+    "postversion": "npm run changelog && git add . && npm run tag",
+    "prepublishOnly": "npm run build",
+    "postpublish": "npm run clean",
+    "clean": "rm -rf ./dist/ ./es/ ./lib/",
+    "start": "npm run clean && NODE_ENV=development rollup -w -c ./build/rollup.config.js",
+    "build": "npm run clean && NODE_ENV=production rollup -c ./build/rollup.config.js"
+  },
+  "files": [
+    "dist",
+    "lib",
+    "es"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/preset-env": "^7.7.7",
+    "conventional-changelog-cli": "^2.0.31",
+    "rollup": "^1.28.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-serve": "^1.0.1",
+    "rollup-plugin-uglify": "^6.0.4"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.7.7",
+    "@babel/runtime-corejs2": "^7.7.7",
+    "lodash": "^4.17.15",
+    "shelljs": "^0.8.3",
+    "the-answer": "^1.0.0"
+  },
+  "bin": {
+    "submodule-rule": "./bin/submodule-rule.js"
+  }
+}
