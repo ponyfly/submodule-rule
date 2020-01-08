@@ -55,6 +55,7 @@ function checkoutSubModuleBranchForDev () {
       exec(`git checkout ${branch}`, function (err, stdout, stderr) {
         if (err) {
           console.log(chalk.red(stderr))
+          shell.exit(1)
           return
         }
         console.log('\n')
