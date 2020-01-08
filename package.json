@@ -1,6 +1,6 @@
 {
   "name": "@sd-test/submodule-rule",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "repository": "https://github.com/ponyfly/submodule-rule",
   "license": "MIT",
   "module": "es/index.js",
