@@ -1,5 +1,5 @@
 {
-  "name": "submodule-rule",
+  "name": "@sd-test/submodule-rule",
   "version": "0.0.5",
   "repository": "https://github.com/ponyfly/submodule-rule",
   "license": "MIT",
