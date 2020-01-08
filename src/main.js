@@ -32,8 +32,11 @@ function checkoutSubModuleBranchForDev () {
       console.log(chalk.red(stderr))
       return
     }
-    const branchesStr = stdout.trim()
-    const branches = branchesStr.replace(/\*|\n/gm,'').split(/\s+/)
+    let branchesStr = stdout.trim()
+    if (branchesStr.indexOf('HEAD detached at') !== -1) {
+      branchesStr = branchesStr.replace(/\(HEAD detached at ([a-z0-9]+)\)/, '$1')
+    }
+    const branches = branchesStr.replace(/\*|\n/gm,'').split(/\s+/).filter(br => br)
     const currentBranch = stdout.match(/\*\s(.+)\b/)[1]
     questions[0].default = currentBranch || 'master'
     questions[0].choices = branches.map(br => {
