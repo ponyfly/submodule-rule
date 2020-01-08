@@ -5,7 +5,7 @@
 2. package.json中添加两条命令：
 ```
 "script": {
-    "preserve": "submodule-rule-cli --dev $branch",
+    "preserve": "submodule-rule-cli --dev",
     "prebuild": "submodule-rule-cli --prod",
 }
 ```
