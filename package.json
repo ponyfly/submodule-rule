@@ -1,6 +1,7 @@
 {
   "name": "submodule-rule",
-  "version": "0.0.3",
+  "version": "0.0.4",
+  "repository": "https://github.com/ponyfly/submodule-rule",
   "license": "MIT",
   "module": "es/index.js",
   "main": "lib/index.js",
@@ -22,11 +23,17 @@
     "lib",
     "es"
   ],
+  "keywords": [
+    "submodule"
+  ],
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/plugin-transform-runtime": "^7.7.6",
     "@babel/preset-env": "^7.7.7",
+    "chalk": "^3.0.0",
+    "commander": "^4.1.0",
     "conventional-changelog-cli": "^2.0.31",
+    "inquirer": "^7.0.3",
     "rollup": "^1.28.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
